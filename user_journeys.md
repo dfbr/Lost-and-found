@@ -1,41 +1,57 @@
 # User Journeys
 
-## Reporting Found Items
-- Users can report a found item without registration. 
-- Example: "I found this hat in the park."
+## User Journey for Registration
+1. **User visits the registration page.**
+2. **User fills out the registration form**:
+   - Name
+   - Email
+   - Password
+   - Phone number (optional)
+3. **User submits the form.**
+4. **System validates input** and either:
+   - Success: Sends a confirmation email to the user.
+   - Error: Displays error messages.
+5. **User clicks the confirmation link** in the email to verify their account.
+6. **User is directed to the login page.**
 
-## Reporting Lost Items and Other Workflows
-- Users must register before reporting a lost item or engaging in any other user workflow.
+## User Journey for Posting Lost Items
+1. **User logs into their account.**
+2. **User navigates to the 'Post Lost Item' section.**
+3. **User fills out the form with the following details**:
+   - Item description
+   - Date and location lost
+   - Contact information
+4. **User submits the form.**
+5. **System confirms submission** and provides a reference number.
 
-## Steps for Reporting Found Items:
-1. User selects "Report Found Item" option.
-2. User submits details of the found item (e.g., description, location).
+## User Journey for Posting Found Items
+1. **User logs into their account.**
+2. **User navigates to the 'Post Found Item' section.**
+3. **User fills out the form with the following details**:
+   - Item description
+   - Date and location found
+   - Contact information
+4. **User submits the form.**
+5. **System confirms submission** and provides a reference number.
 
-### Mermaid Diagrams
-```mermaid
-sequenceDiagram
-    participant User
-    participant System
-    User->>System: Report Found Item
-    System-->>User: Submission Successful
-```
+## User Journey for Searching Lost Items
+1. **User accesses the homepage.**
+2. **User enters search criteria:**
+   - Item description
+   - Location
+   - Date
+3. **User clicks 'Search'.**
+4. **System displays matching results.**
+5. **User views detailed information** about the listed items.
 
-## Steps for Reporting Lost Items:
-1. User must first register.
-2. User selects "Report Lost Item" after registration.
-3. User submits details of the lost item.
+## User Journey for Recovering Lost Items
+1. **User identifies a matching item from the search results.**
+2. **User contacts the owner** through the provided contact information.
+3. **User arranges a meeting** to recover the lost item.
 
-### Mermaid Diagrams
-```mermaid
-sequenceDiagram
-    participant User
-    participant System
-    User->>System: Register
-    System-->>User: Registration Successful
-    User->>System: Report Lost Item
-    System-->>User: Submission Successful
-```
+## Important Notes for Users
+- Registration is required for both posting and recovering items.
+- Users must provide accurate contact information to facilitate communication.  
 
-## Summary
-- If a user wants to report a found item, they can do so directly. 
-- For all other workflows, registration is required before proceeding.
+## Conclusion
+All user journeys highlight the importance of clear communication and reliable information exchange between users when posting or recovering items.
