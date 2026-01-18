@@ -8,36 +8,38 @@ This document outlines the five most likely user journeys for this app, along wi
 
 ### 1. **Reporting a Lost Item**
 #### Steps:
-1. User logs into their account or registers for a new one.
-2. User navigates to the "Report Lost Item" section.
-3. They fill out a form with details such as item type, description, location where the item was lost, and an optional photo.
-4. Upon submission, the item is listed on the "Lost Items" feed and potentially matched to relevant found items.
-5. User is alerted when relevant matches or updates are found.
+1. User visits the platform and navigates directly to the "Report Lost Item" section without needing to register or log in.
+2. They fill out a form with details such as item type, description, location where the item was lost, and an optional photo.
+3. Upon submission, the item is listed on the "Lost Items" feed and potential matches are identified.
+4. User is prompted to register or log in to receive notifications about matches and updates.
+    - If the user registers, they are linked to their lost item and will receive updates.
+    - If they skip registration, they can later return to claim or manage their post by registering with the same details.
 
 ```mermaid
 graph TD
-    A[User logs in or registers] --> B[User navigates to "Report Lost Item"]
-    B --> C[User fills out details (item type, description, location, photo)]
-    C --> D[Item listed in "Lost Items" feed]
-    D --> E[Potential matches identified]
-    E --> F[User alerted with relevant matches or updates]
+    A[User visits "Report Lost Item"] --> B[Fill out item details (type, description, location, photo)]
+    B --> C[Item listed in "Lost Items" feed]
+    C --> D[Matches identified]
+    D --> E[Prompt to register for updates]
+    E --> F[Register to receive notifications or skip]
 ```
 
 ### 2. **Reporting a Found Item**
 #### Steps:
-1. User logs into their account or registers for a new one.
-2. User opens the "Report Found Item" section.
-3. They complete a form with information such as item type, description, location where the item was found, and an optional photo.
-4. The platform lists the found item to the "Found Items" feed and attempts to match it to lost items.
-5. User receives notifications if a match or an inquiry is made by the item owner.
+1. User visits the platform and navigates directly to the "Report Found Item" section without needing to register or log in.
+2. They complete a form with information such as item type, description, location where the item was found, and an optional photo.
+3. Upon submission, the item is listed on the "Found Items" feed and the platform attempts to match it to lost items.
+4. User is prompted to register or log in to receive notifications if an owner contacts them.
+    - If the user registers, their found item is linked to their account and they will receive updates.
+    - If they skip registration, they can later return to claim or manage their post by registering with the same details.
 
 ```mermaid
 graph TD
-    A[User logs in or registers] --> B[User navigates to "Report Found Item"]
-    B --> C[User fills out details (item type, description, location, photo)]
-    C --> D[Item listed in "Found Items" feed]
-    D --> E[Automatically matches to lost items]
-    E --> F[User notified of matches or inquiries]
+    A[User visits "Report Found Item"] --> B[Fill out item details (type, description, location, photo)]
+    B --> C[Item listed in "Found Items" feed]
+    C --> D[Matches identified]
+    D --> E[Prompt to register for updates]
+    E --> F[Register to receive notifications or skip]
 ```
 
 ### 3. **Searching for an Item**
