@@ -1,108 +1,41 @@
-# User Journeys: Lost and Found Platform
+# User Journeys
 
-This document outlines the five most likely user journeys for this app, along with detailed steps for each. Additionally, a list of additional user journeys is provided for future elaboration.
+## Reporting Found Items
+- Users can report a found item without registration. 
+- Example: "I found this hat in the park."
 
----
+## Reporting Lost Items and Other Workflows
+- Users must register before reporting a lost item or engaging in any other user workflow.
 
-## **Detailed User Journeys**
+## Steps for Reporting Found Items:
+1. User selects "Report Found Item" option.
+2. User submits details of the found item (e.g., description, location).
 
-### 1. **Reporting a Lost Item**
-#### Steps:
-1. User visits the platform and navigates directly to the "Report Lost Item" section without needing to register or log in.
-2. They fill out a form with details such as item type, description, location where the item was lost, and an optional photo.
-3. Upon submission, the item is listed on the "Lost Items" feed and potential matches are identified.
-4. User is prompted to register or log in to receive notifications about matches and updates.
-    - If the user registers, they are linked to their lost item and will receive updates.
-    - If they skip registration, they can later return to claim or manage their post by registering with the same details.
-
+### Mermaid Diagrams
 ```mermaid
-graph TD
-    A[User visits "Report Lost Item"] --> B[Fill out item details (type, description, location, photo)]
-    B --> C[Item listed in "Lost Items" feed]
-    C --> D[Matches identified]
-    D --> E[Prompt to register for updates]
-    E --> F[Register to receive notifications or skip]
+sequenceDiagram
+    participant User
+    participant System
+    User->>System: Report Found Item
+    System-->>User: Submission Successful
 ```
 
-### 2. **Reporting a Found Item**
-#### Steps:
-1. User visits the platform and navigates directly to the "Report Found Item" section without needing to register or log in.
-2. They complete a form with information such as item type, description, location where the item was found, and an optional photo.
-3. Upon submission, the item is listed on the "Found Items" feed and the platform attempts to match it to lost items.
-4. User is prompted to register or log in to receive notifications if an owner contacts them.
-    - If the user registers, their found item is linked to their account and they will receive updates.
-    - If they skip registration, they can later return to claim or manage their post by registering with the same details.
+## Steps for Reporting Lost Items:
+1. User must first register.
+2. User selects "Report Lost Item" after registration.
+3. User submits details of the lost item.
 
+### Mermaid Diagrams
 ```mermaid
-graph TD
-    A[User visits "Report Found Item"] --> B[Fill out item details (type, description, location, photo)]
-    B --> C[Item listed in "Found Items" feed]
-    C --> D[Matches identified]
-    D --> E[Prompt to register for updates]
-    E --> F[Register to receive notifications or skip]
+sequenceDiagram
+    participant User
+    participant System
+    User->>System: Register
+    System-->>User: Registration Successful
+    User->>System: Report Lost Item
+    System-->>User: Submission Successful
 ```
 
-### 3. **Searching for an Item**
-#### Steps:
-1. User navigates to the search page without needing to sign in.
-2. They input filters like item type, location, date, etc.
-3. Platform displays possible matches from lost or found items.
-4. User clicks on a result to view its details and contact the poster.
-5. If signed in, the user can save their search or subscribe to receive alerts for similar items.
-
-```mermaid
-graph TD
-    A[User navigates to search page] --> B[Input filters (type, location, date)]
-    B --> C[Platform displays possible matches]
-    C --> D[View details of a result]
-    D --> E[Contact the poster]
-    E --> F[Save search or subscribe for alerts (if signed in)]
-```
-
-### 4. **Matching Between Lost and Found Items**
-#### Steps:
-1. The platform automatically scans new postings (lost or found) for possible matches using keywords, location proximity, and image recognition.
-2. An automated match notification is sent to both parties.
-3. Users can review the match and initiate communication if they recognize their item.
-4. Users coordinate to confirm ownership and arrange return logistics.
-
-```mermaid
-graph TD
-    A[New lost or found post added] --> B[Platform scans for matches (keywords, location, images)]
-    B --> C[Automated match notification sent to both parties]
-    C --> D[Users review the match]
-    D --> E[Users communicate if match is valid]
-    E --> F[Coordinate ownership confirmation and return]
-```
-
-### 5. **Direct Communication Between Users**
-#### Steps:
-1. A user locates a listing they believe matches their lost/found item.
-2. They click "Contact" to initiate a secure chat within the app.
-3. Message notifications are exchanged using in-app alerts or email.
-4. Users coordinate details but are encouraged to meet in secure locations for item handoff.
-
-```mermaid
-graph TD
-    A[User locates a matching listing] --> B[Click "Contact" to initiate chat]
-    B --> C[Secure chat opened]
-    C --> D[Users exchange messages]
-    D --> E[Coordinate handoff at a secure location]
-```
-
----
-
-## **Additional User Journeys for Future Detailing**
-1. Registering and managing an account.
-2. Subscribing to search result alerts.
-3. Integrating social media for item reports (e.g., posting a lost item to Facebook/Instagram).
-4. Managing and editing existing listings.
-5. Flagging inappropriate or suspicious posts.
-6. Notifications and reminders for unresolved reports.
-7. Deleting an account and personal data (GDPR compliance).
-8. Reporting lost pets specifically (custom workflows for pets).
-9. Reporting stolen items to authorities (with police report integration).
-10. Claiming an item as resolved (marking lost or found items as completed).
-
----
-This document will be updated as the platform evolves.
+## Summary
+- If a user wants to report a found item, they can do so directly. 
+- For all other workflows, registration is required before proceeding.
